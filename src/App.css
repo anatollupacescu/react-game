@@ -73,3 +73,7 @@ ol, ul {
 .game-info {
   margin-left: 20px;
 }
+
+.counter {
+  width: 100px;
+}

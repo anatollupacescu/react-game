@@ -23,7 +23,7 @@ export default App;
 
 function Counter(props) {
     return (
-        <div className="counter">{props.count}</div>
+        <div className="counter">Click count: {props.count}</div>
     );
 }
 
