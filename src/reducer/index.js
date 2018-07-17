@@ -1,5 +1,5 @@
 import initialState from './initialState'
-import CLICK, {JUMP_TO_STEP} from '../action'
+import {CLICK, JUMP_TO_STEP} from '../action'
 
 const appReducer = (state = initialState, action) => {
     switch (action.type) {

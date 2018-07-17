@@ -10,5 +10,3 @@ export const jumpTo = (step) => ({
     type: JUMP_TO_STEP,
     step
 });
-
-export default { cellClick, jumpTo }

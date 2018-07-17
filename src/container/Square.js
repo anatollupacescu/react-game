@@ -1,22 +1,12 @@
-import React from 'react';
-
 import {cellClick} from "../action/index";
 import {connect} from "react-redux";
-
-const Square = ({value, index, squareClicked}) => (
-    <button className="square" onClick={() => squareClicked(index) }>
-        {value}
-    </button>
-);
+import Square from "../component/Square";
 
 const mapDispatchToProps = (dispatch) => ({
     squareClicked(i) {
-        dispatch(cellClick(i))
+        let clickAction = cellClick(i);
+        dispatch(clickAction)
     }
-})
+});
 
-const ConnectedSquare = connect(null, mapDispatchToProps)(Square)
-
-export { ConnectedSquare as Square};
-
-export default Square;
+export default connect(null, mapDispatchToProps)(Square)
