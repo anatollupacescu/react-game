@@ -7,7 +7,7 @@ class Game extends React.Component {
     render() {
         const history = this.props.history;
         const current = history[this.props.stepNumber];
-        const winner = calculateWinner(current.squares);
+        const winner = this.props.winner;
 
         const moves = history.map((step, move) => {
             const desc = move ?
@@ -53,24 +53,5 @@ function countFilled(squares) {
     return squares.reduce(reducer, 0)
 }
 
-function calculateWinner(squares) {
-    const lines = [
-        [0, 1, 2],
-        [3, 4, 5],
-        [6, 7, 8],
-        [0, 3, 6],
-        [1, 4, 7],
-        [2, 5, 8],
-        [0, 4, 8],
-        [2, 4, 6]
-    ];
-    for (let i = 0; i < lines.length; i++) {
-        const [a, b, c] = lines[i];
-        if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
-            return squares[a];
-        }
-    }
-    return null;
-}
-
 export default Game
+

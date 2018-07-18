@@ -3,9 +3,7 @@ import {connect} from 'react-redux'
 
 import {jumpTo} from '../action'
 
-const mapStateToProps = ({history, stepNumber, xIsNext}) => ({
-    history, stepNumber, xIsNext
-});
+const mapStateToProps = (state) => state;
 
 const mapDispatchToProps = (dispatch) => ({
     jumpToMove(move) {
