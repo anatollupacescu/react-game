@@ -14,6 +14,6 @@ const App = () => (
                 <Game/>
             </div>
         </div>
-)
+);
 
 export default App
