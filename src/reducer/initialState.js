@@ -1,4 +1,4 @@
-const initialState = {
+export const initialState = {
     history: [
         {
             squares: Array(9).fill(null)
@@ -7,5 +7,3 @@ const initialState = {
     stepNumber: 0,
     xIsNext: true
 };
-
-export default initialState

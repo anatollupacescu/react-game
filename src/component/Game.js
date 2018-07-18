@@ -1,4 +1,3 @@
-import {jumpTo} from '../action'
 import React from "react"
 import Counter from "./Counter"
 import Board from "./Board"
@@ -16,7 +15,7 @@ class Game extends React.Component {
                 'Go to game start';
             return (
                 <li key={move}>
-                    <button onClick={() => jumpTo(move)}>{desc}</button>
+                    <button onClick={() => this.props.jumpToMove(move)}>{desc}</button>
                 </li>
             );
         });

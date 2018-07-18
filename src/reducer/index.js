@@ -1,4 +1,4 @@
-import initialState from './initialState'
+import {initialState} from './initialState'
 import {CLICK, JUMP_TO_STEP} from '../action'
 
 const appReducer = (state = initialState, action) => {
@@ -6,7 +6,7 @@ const appReducer = (state = initialState, action) => {
         case CLICK:
             return click(state, action.id);
         case JUMP_TO_STEP:
-            return jumpToStep(state, action.step)
+            return jumpToStep(state, action.step);
         default:
             return state
     }
