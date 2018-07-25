@@ -33,6 +33,7 @@ class Game extends React.Component {
                 <div className="game-board">
                     <Board squares={current.squares} />
                 </div>
+                <button onClick={this.props.fetchServerData}>Fetch server data</button>
                 <div className="game-info">
                     <div>{status}</div>
                     <ol>{moves}</ol>
@@ -54,4 +55,3 @@ function countFilled(squares) {
 }
 
 export default Game
-
